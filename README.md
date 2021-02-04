@@ -1,6 +1,5 @@
 # react-stl-file-viewer
 
-> Made with create-react-library
 
 [![NPM](https://img.shields.io/npm/v/react-stl-file-viewer.svg)](https://www.npmjs.com/package/react-stl-file-viewer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -13,17 +12,34 @@ npm install --save react-stl-file-viewer
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'react-stl-file-viewer'
+import { StlViewer } from 'react-stl-file-viewer'
 import 'react-stl-file-viewer/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div>
+        <div>STL Viewer</div>
+        <StlViewer
+          width='500'
+          height='500'
+          url='StifteBoxV2.STL'
+          gridColor='rgb(255, 255, 255)'
+          objectColor='rgb(77, 136, 255)'
+          skyboxColor='rgb(242, 242, 242)'
+        />
+      </div>
+    </div>
+  )
 }
+
+export default App
+
 ```
+
+
 
 ## License
 

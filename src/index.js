@@ -1,6 +1,16 @@
-import React from 'react'
-import styles from './styles.module.css'
+import React, { useEffect } from 'react'
+import Stl from './Stl'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+export const StlViewer = ({
+  width,
+  height,
+  url,
+  objectColor,
+  gridColor,
+  skyboxColor
+}) => {
+  useEffect(() => {
+    Stl(width, height, url, objectColor, gridColor, skyboxColor)
+  }, [])
+  return <div id='stlviewer'></div>
 }

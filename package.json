@@ -1,10 +1,20 @@
 {
   "name": "react-stl-file-viewer",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "version": "0.0.1",
+  "description": "A simple stl preview component to embed in react application",
   "author": "yatheeshraju",
   "license": "MIT",
   "repository": "yatheeshraju/react-stl-file-viewer",
+  "keywords": [
+    "stl",
+    "threejs",
+    "web",
+    "preview",
+    "react stl",
+    "stl react",
+    "embed",
+    "render stl"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -24,7 +34,8 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "three": "^0.125.2"
   },
   "devDependencies": {
     "microbundle-crl": "^0.13.10",
