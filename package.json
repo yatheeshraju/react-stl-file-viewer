@@ -1,6 +1,6 @@
 {
   "name": "react-stl-file-viewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple stl preview component to embed in react application",
   "author": "yatheeshraju",
   "license": "MIT",
@@ -57,6 +57,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1"
+  },
+  "dependencies": {
+    "three": "^0.125.2"
   },
   "files": [
     "dist"

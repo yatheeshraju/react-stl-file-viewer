@@ -15,7 +15,6 @@ npm install --save react-stl-file-viewer
 import React from 'react'
 
 import { StlViewer } from 'react-stl-file-viewer'
-import 'react-stl-file-viewer/dist/index.css'
 
 const App = () => {
   return (
@@ -25,10 +24,12 @@ const App = () => {
         <StlViewer
           width='500'
           height='500'
-          url='StifteBoxV2.STL'
-          gridColor='rgb(255, 255, 255)'
+          url='elephant.stl'
+          groundColor='rgb(255, 255, 255)'
           objectColor='rgb(77, 136, 255)'
-          skyboxColor='rgb(242, 242, 242)'
+          skyboxColor='rgb(255, 255, 255)'
+          gridLineColor='rgb(0, 0, 0)'
+          lightColor='rgb(255,255,255)'
         />
       </div>
     </div>

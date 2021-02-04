@@ -9,8 +9,10 @@ export default function Stl(
   height,
   url,
   objectColor,
-  gridColor,
-  skyboxColor
+  gridLineColor,
+  skyboxColor,
+  groundColor,
+  lightColor
 ) {
   // scene setup
 
@@ -25,7 +27,7 @@ export default function Stl(
   cameraTarget = new THREE.Vector3(0, 0, 0)
 
   // renderer setup
-  renderer = new THREE.WebGLRenderer({ antialias: true })
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
   renderer.setSize(width, height)
 
   // where to render your scene
@@ -40,13 +42,13 @@ export default function Stl(
 
   const ground = new THREE.Mesh(
     new THREE.PlaneGeometry(2000, 2000),
-    new THREE.MeshPhongMaterial({ color: gridColor, depthWrite: false })
+    new THREE.MeshPhongMaterial({ color: groundColor, depthWrite: false })
   )
   ground.rotation.x = -Math.PI / 2
   ground.receiveShadow = true
   scene.add(ground)
 
-  const grid = new THREE.GridHelper(2000, 20, 0x000000, 0x000000)
+  const grid = new THREE.GridHelper(2000, 20, gridLineColor, gridLineColor)
   grid.material.opacity = 0.2
   grid.material.transparent = true
   scene.add(grid)
@@ -56,7 +58,7 @@ export default function Stl(
   hemiLight.position.set(0, 200, 0)
   scene.add(hemiLight)
 
-  const directionalLight = new THREE.DirectionalLight(0xffffff)
+  const directionalLight = new THREE.DirectionalLight(lightColor)
   directionalLight.position.set(0, 200, 100)
   directionalLight.castShadow = true
   directionalLight.shadow.camera.top = 180
