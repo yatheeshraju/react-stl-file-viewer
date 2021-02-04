@@ -11,7 +11,7 @@ const App = () => {
         <StlViewer
           width='500'
           height='500'
-          url='StifteBoxV2.STL'
+          url='elephant.stl'
           gridColor='rgb(255, 255, 255)'
           objectColor='rgb(77, 136, 255)'
           skyboxColor='rgb(242, 242, 242)'
