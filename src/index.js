@@ -22,6 +22,6 @@ export const StlViewer = ({
       groundColor,
       lightColor
     )
-  }, [])
+  }, [url])
   return <div id='stlviewer'></div>
 }

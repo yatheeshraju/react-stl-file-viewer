@@ -31,6 +31,7 @@ export default function Stl(
   renderer.setSize(width, height)
 
   // where to render your scene
+  document.getElementById('stlviewer').innerHTML = ''
   document.getElementById('stlviewer').appendChild(renderer.domElement)
 
   // controls
