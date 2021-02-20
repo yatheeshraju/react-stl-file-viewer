@@ -27,7 +27,11 @@ export default function Stl(
   cameraTarget = new THREE.Vector3(0, 0, 0)
 
   // renderer setup
-  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+  renderer = new THREE.WebGLRenderer({
+    antialias: true,
+    alpha: true,
+    preserveDrawingBuffer: true
+  })
   renderer.setSize(width, height)
 
   // where to render your scene
@@ -104,7 +108,6 @@ export default function Stl(
 
   const animate = () => {
     requestAnimationFrame(animate)
-
     render()
   }
 
