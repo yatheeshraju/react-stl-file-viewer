@@ -9,7 +9,8 @@ export const StlViewer = ({
   gridLineColor,
   skyboxColor,
   groundColor,
-  lightColor
+  lightColor,
+  volume
 }) => {
   useEffect(() => {
     Stl(
@@ -20,7 +21,8 @@ export const StlViewer = ({
       gridLineColor,
       skyboxColor,
       groundColor,
-      lightColor
+      lightColor,
+      volume
     )
   }, [url])
   return <div id='stlviewer'></div>
